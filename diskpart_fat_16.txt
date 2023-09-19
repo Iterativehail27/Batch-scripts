@@ -4,7 +4,7 @@
 (echo list disk) | diskpart
 (echo "select a disk")
 set /p input= 
-(echo "You are going to format disk %input% to fat 16 4GB size if you've made a mistake press ctrl + C now" [y:n])
+(echo "You are going to format disk %input% to fat 16 4GB size if you've made a mistake press 'n' now" [y:n])
 set /p choice1= 
 if %choice1% == Y goto A
 if %choice1% == y goto A
