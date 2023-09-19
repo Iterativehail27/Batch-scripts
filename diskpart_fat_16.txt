@@ -50,7 +50,7 @@ if %choice3% != y goto D
 
 # "This file will format your drive into a fat 16 file system compatible drive, it will set the primary partition size to 4gb and erase all data on the drive."
 
-# The file comes with an instruction set that is written in the CMD line within the diskpart tool. The script asks for user input such as selecting a drive NUMBER, not letter, after the "list disk" command is run behind the scenes Any invalid inputs may lead to the script crashing." 
+# The file comes with an instruction set that is written in the CMD line within the diskpart tool. The script asks for user input such as selecting a drive NUMBER, not letter, after the "list disk" command is run behind the scenes. Any invalid inputs may lead to the script crashing." 
 
 # "The script requires administrative mode to run properly."
 
