@@ -1,5 +1,9 @@
 # Batch-scripts
 This file contains batch scripts that are in no sorted order or arranged for any purpose, they are custom batch scripts made to perform very specific jobs but if you find that they work for your installation for a similar purpose feel free to use them, just note that certain parameters may need to be changed such as the names of directories or files.
+<br><br>
+<h4> ***IMPORTANT*** 
+  <br><br>
+  Every batch script will come in a format of the .bat file by itself and a .txt file of the same name in the repository which gives a little more info on each .bat file telling you what it does, and for what reason. I highly recommend you read the .txt file version.</h4>
 <br>
 
 # Automation
