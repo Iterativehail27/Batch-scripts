@@ -41,7 +41,7 @@ timeout /t 1 /nobreak >nul
 set /a countdown=%countdown% -1
 if %countdown% NEQ 0 goto :timer_loop
 
-
+cls
 (echo select disk %input% 
 echo clean 
 echo create part primary size=4000
