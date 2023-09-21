@@ -9,6 +9,7 @@ set /p input=
 set /a Testval="%input%"*1
 if %Testval%==%input% goto F
 if NOT %Testval%==%input% cls && goto D
+if %ERRORLEVEL% NEQ 0 cls && goto D
 
 :F
 (echo "You are going to format disk %input% to fat 16 4GB size if you've made a mistake press 'n' now" [y:n])
