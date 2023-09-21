@@ -35,7 +35,7 @@ set countdown=5
 :timer_loop
 
 
-echo %countdown% seconds...
+echo %countdown%...
 
 timeout /t 1 /nobreak >nul
 
