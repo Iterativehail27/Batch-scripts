@@ -47,7 +47,11 @@ echo clean
 echo create part primary size=4000
 echo format fs=fat quick) | diskpart
 (echo "Congratulations you have just formatted your drive!")
-pause
+(echo.)
+(echo Press any key to end)
+pause >nul
+cls
+
 
 :C
 (echo Terminating)
