@@ -63,8 +63,7 @@ timeout /t 1 /nobreak >nul
 set /a countdown=%countdown% -1
 if %countdown% NEQ 0 goto :timer_loop_2
 
-
-(echo exit) | diskpart 
+exit
 
 
 :D
