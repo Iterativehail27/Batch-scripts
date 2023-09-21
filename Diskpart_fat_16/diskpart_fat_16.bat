@@ -64,6 +64,7 @@ set /a countdown=%countdown% -1
 if %countdown% NEQ 0 goto :timer_loop_2
 
 exit
+exit
 
 
 :D
