@@ -51,7 +51,7 @@ echo format fs=fat quick) | diskpart
 
 :C
 (echo Terminating...)
-set countdown=3
+set countdown=2
 
 :timer_loop_2
 
