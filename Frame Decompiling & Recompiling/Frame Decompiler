@@ -1,0 +1,16 @@
+setlocal enabledelayedexpansion
+
+
+set "YOUR DIRECTORY HERE"
+set "YOUR DIRECTORY HERE"
+
+cd /d "YOUR DIRECTORY HERE"
+
+for %%i in (*.mkv) do (
+    echo Processing "%%i"
+    ffmpeg -i "%%i" "YOUR DIRECTORY HERE\frame%%07d.png"
+)
+
+endlocal
+
+PAUSE
