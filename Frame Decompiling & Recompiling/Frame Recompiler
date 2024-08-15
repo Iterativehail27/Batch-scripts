@@ -1,0 +1,5 @@
+cd /d ###YOUR DRIVE LETTER (ex. G:) HERE###
+cd ###YOUR DIRECTORY HERE###
+ffmpeg -i frame%%07d.png -c:v libsvtav1 "YOUR DIRECTORY HERE"
+
+PAUSE
