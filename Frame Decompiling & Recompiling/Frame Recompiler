@@ -1,5 +1,5 @@
 cd /d ###YOUR DRIVE LETTER (ex. G:) HERE###
 cd ###YOUR DIRECTORY WITH YOUR EDITED FRAMES HERE###
-ffmpeg -i frame%%07d.png -c:v libsvtav1 "YOUR OUTPUT DIRECTORY HERE\1.mkv"
+ffmpeg -i frame%%07d.png -r "your original FPS of your input video here" -c:v libsvtav1 -crf 1 -pix_fmt yuv420p "YOUR OUTPUT DIRECTORY HERE\1.mkv" -r "your original FPS of your input video here"
 
 PAUSE
