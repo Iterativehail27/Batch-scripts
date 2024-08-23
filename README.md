@@ -3,7 +3,7 @@ This file contains batch scripts that are in no sorted order or arranged for any
 <br><br>
 <h4> ***IMPORTANT*** 
   <br><br>
-  Every batch script will come in a format of the .bat file by itself and a .txt file of the same name in the repository which gives a little more info on each .bat file telling you what it does, and for what reason. I highly recommend you read the .txt file version.</h4>
+  Some batch scripts will come in a format of the .bat file by itself and a .txt file of the same name in the repository which gives a little more info on each .bat file telling you what it does, and for what reason. I highly recommend you read the .txt file version.</h4>
 <br>
 
 # Automation
