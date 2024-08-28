@@ -18,6 +18,16 @@ echo "%filename%"
 
 move "%filename%" "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
 
+
+cd ###YOUR AI MODEL FOLDER EXE HERE### 
+
+### <EXAMPLE> ###
+
+cd "G:\realesrgan-ncnn-vulkan-20220424-windows\realesrgan-ncnn-vulkan.exe" -i "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###" -o "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###" -s 1 -n 4x-UltraSharp-fp32 -f png
+
+### </EXAMPLE> ###
+
+
 setlocal enabledelayedexpansion
 
 set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
