@@ -22,6 +22,11 @@ echo "%filename%"
 
 move "%filename%" "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
 
+setlocal enabledelayedexpansion
+
+set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+
 cd "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
 for %%i in (*.mkv) do (
     echo Processing "%%i"
@@ -29,6 +34,7 @@ for %%i in (*.mkv) do (
     move "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###\frame%%07d.png" "###YOUR VIDEO STAGING FOLDER HERE###"
 )
 
+endlocal
 
 cd ###YOUR AI MODEL FOLDER EXE HERE### 
 
