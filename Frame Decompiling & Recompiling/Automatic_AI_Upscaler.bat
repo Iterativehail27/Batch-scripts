@@ -7,7 +7,6 @@ cd /d ###YOUR DRIVE LETTER HERE###
 cd ###YOUR VIDEO FRAME INPUT DIRECTORY HERE###
 del /s /q *.*
 
-cd /d ###YOUR DRIVE LETTER HERE###
 cd ###YOUR VIDEO STAGING DIRECTORY HERE###
 del /s /q *.*
 
