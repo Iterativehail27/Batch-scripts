@@ -58,7 +58,7 @@ realesrgan-ncnn-vulkan.exe -i "%frameinput%" -o "%frameinput%" -s 2 -n 4x-UltraS
 
 setlocal enabledelayedexpansion
 
-cd %frameinput%"
+cd "%frameinput%"
 
 
 echo Processing "%Video_Name%"
