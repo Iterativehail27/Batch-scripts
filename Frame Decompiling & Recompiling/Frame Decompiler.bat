@@ -1,9 +1,5 @@
 setlocal enabledelayedexpansion
 
-
-set "YOUR DIRECTORY WITH YOUR VIDEO HERE"
-set "YOUR DIRECTORY WITH YOUR VIDEO HERE"
-
 cd /d "YOUR DIRECTORY WITH YOUR VIDEO HERE"
 
 for %%i in (*.mkv) do (
