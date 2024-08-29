@@ -39,7 +39,7 @@ cd ###YOUR AI MODEL FOLDER EXE HERE###
 
 ### <EXAMPLE> ###
 
-cd "G:\realesrgan-ncnn-vulkan-20220424-windows\realesrgan-ncnn-vulkan.exe" -i "###YOUR VIDEO STAGING FOLDER HERE###" -o "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###" -s 1 -n 4x-UltraSharp-fp32 -f png
+cd "G:\realesrgan-ncnn-vulkan-20220424-windows\realesrgan-ncnn-vulkan.exe" -i "###YOUR VIDEO STAGING FOLDER HERE###" -o "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###" -s 2 -n 4x-UltraSharp-fp32 -f png
 
 ### </EXAMPLE> ###
 
