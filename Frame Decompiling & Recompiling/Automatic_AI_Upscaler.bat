@@ -1,61 +1,69 @@
 set countdown=20
+set frameinput=###YOUR FRAME INPUT DIRECTORY HERE###
+set frameoutput=###YOUR FRAME OUTPUT DIRECTORY HERE###
+set videostorage=###YOUR VIDEO STORAGE DIRECTORY HERE###
 
 :Z
 echo %countdown%...
 
-cd /d ###YOUR DRIVE LETTER HERE###
-cd ###YOUR VIDEO FRAME INPUT DIRECTORY HERE###
+cd /d G:
+cd %frameinput%
 del /s /q *.*
 
-cd ###YOUR VIDEO STAGING DIRECTORY HERE###
-del /s /q *.*
+cd %videostorage%
 
-cd ###YOUR VIDEO STORAGE FOLDER HERE###
-
-FOR %%F IN ("%###YOUR VIDEO STORAGE FOLDER HERE###%\*.mkv") DO (
+FOR %%F IN ("%videostorage%\*.mkv") DO (
 set filename=%%F
 goto tests
 )
 :tests
 echo "%filename%"
 
-move "%filename%" "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+move "%filename%" "%frameinput%"
 
 setlocal enabledelayedexpansion
 
-set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
-set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+cd "%frameinput%"
 
-cd "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+
 for %%i in (*.mkv) do (
     echo Processing "%%i"
-    ffmpeg -i "%%i" "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###\frame%%07d.png"
-    move "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###\frame%%07d.png" "###YOUR VIDEO STAGING FOLDER HERE###"
+    ffmpeg -i "%%i" "%frameinput%\frame%%07d.png"
 )
 
 endlocal
 
-cd ###YOUR AI MODEL FOLDER EXE HERE### 
+cd "%frameinput%"
 
-### <EXAMPLE> ###
+for %%i in (*.mkv) do (
+    echo Processing "%%i"
+    set Video_Name=%%i
+)
 
-cd "G:\realesrgan-ncnn-vulkan-20220424-windows\realesrgan-ncnn-vulkan.exe" -i "###YOUR VIDEO STAGING FOLDER HERE###" -o "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###" -s 2 -n 4x-UltraSharp-fp32 -f png
+del "%frameinput%\*.mkv"
 
-### </EXAMPLE> ###
+
+                                                                ###THIS PART IS HIGHLY CUSTOMIZABLE###
+                                                                ###YOU MAY USE YOUR OWN AI UPSCALING ENGINE/MODEL HERE###
+
+                                                                            ###<EXAMPLE>###
+
+
+cd G:\realesrgan-ncnn-vulkan-20220424-windows
+realesrgan-ncnn-vulkan.exe -i "%frameinput%" -o "%frameinput%" -s 2 -n 4x-UltraSharp-fp32 -f png 
+
+
+                                                                            ###</EXAMPLE>###
 
 
 setlocal enabledelayedexpansion
 
-set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
-set "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
-
-cd "###YOUR VIDEO FRAME INPUT DIRECTORY HERE###"
+cd %frameinput%"
 
 
-for %%i in (*.mkv) do (
-    echo Processing "%%i"
-    ffmpeg -r 23.976023 -i frame%%07d.png -c:v libsvtav1 -crf 1 -pix_fmt yuv420p "###YOUR VIDEO OUTPUT DIRECTORY HERE###\%%i"
-)
+echo Processing "%Video_Name%"
+ffmpeg -r 23.976023 -i frame%%07d.png -c:v libsvtav1 -crf 1 -pix_fmt yuv420p "%frameoutput%\%Video_Name%"
+
 
 endlocal
 
